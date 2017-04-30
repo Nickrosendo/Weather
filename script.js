@@ -11,10 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
       var json_obj= JSON.parse(Get(url));
       local.innerHTML = json_obj.name;
       temp.innerHTML = K_convert(json_obj.main.temp) + " ºC";
-      clima.innerHTML = "teste";
-      // console.log(xhr.status);
-      // console.log(xhr.statusText);
-
+      clima.innerHTML = clima.innerHTML = json_obj.weather[0].main;
+      
       
     });
   }    
